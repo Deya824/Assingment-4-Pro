@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+ <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Document</title>
     <style>
         *{
-            font-family: "Inter", sans-serif;
-           font-feature-settings: "cv05" 1;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+            font-family: "Geist", sans-serif;
+
             
-        }
+      }
     </style>
 </head>
 <body class="bg-slate-100">
@@ -49,7 +47,7 @@
         <section class="filter-btn">
     <div class="flex justify-between mt-7">
         <div class="left font-bold text-xl  text-blue-950 ">Available Jobs</div>
-        <div class="right text-gray-500" id="Calculate Jobs">8 jobs</div>
+        <div class="right text-gray-500" id="Calculate Jobs"><span id="count" class="hidden"></span> <span id="filtertext" class="hidden ">of </span><span id="allNumber">8</span> jobs</div>
     </div>
     <div class=" flex gap-3 mt-6"> 
         <button onclick="toggle('all-filter')" class="bg-blue-400 text-[13px] text-white py-1.5  px-9  rounded " id="all-filter">All</button>
@@ -58,8 +56,9 @@
     </div>
     
     </section>
-   <section id="filterd">
-    <h2></h2>
+   <section id="filtered" class="hidden">
+
+    
    </section>
    <section id="card">
 <!-- //card 1 -->
