@@ -5,13 +5,20 @@ let allNumber=document.getElementById("allNumber");
 let filterNumber=document.getElementById("count");
 let filterText=document.getElementById("filtertext");
 const emptyStateHTML = `
-<div class="bg-white p-10 rounded mt-4 py-30">
+<div class="bg-white p-10 rounded mt-4 py-20 flex flex-col items-center justify-center text-center">
     <div class="flex justify-center">
-        <img src="./jobs.png" alt="">   
+        <img src="./jobs.png" alt="" class="w-32 md:w-48">   
     </div>
-    <div class="flex justify-center mt-4"><h2 class="font-bold">No jobs available</h2></div>
-    <div class="flex justify-center"><p class="text-gray-500">Check back soon for new job opportunities</p></div>
+    
+    <div class="mt-4">
+        <h2 class="font-bold text-xl">No jobs available</h2>
+        <p class="text-gray-500 mt-2 max-w-xs mx-auto">
+            Check back soon for new job opportunities
+        </p>
+    </div>
 </div>`;
+
+
 let interviewList=[];
 let rejectedList=[];
 const allCards=document.getElementById("card");
