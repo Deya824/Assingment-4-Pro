@@ -31,6 +31,12 @@ function count(){
     interviewCount.innerText=interviewList.length;
     rejectedCount.innerText=rejectedList.length;
     allNumber.innerText=allCards.children.length;
+    if (currentStatus === "interview-filter") {
+        filterNumber.innerText = interviewList.length;
+    } else if (currentStatus === "rejected-filter") {
+        filterNumber.innerText = rejectedList.length;
+    } 
+
 
 }
 count();
@@ -50,21 +56,24 @@ function toggle(id){
  if(id==="interview-filter"){
     filterText.classList.remove("hidden");
     filterNumber.classList.remove("hidden");
-    count();
+  
     filterNumber.innerText=interviewList.length;
    
     allCards.classList.add("hidden");
     filtered.classList.remove("hidden");
+      count();
     renderInterview();
  }
  else if(id==="rejected-filter"){
         filterText.classList.remove("hidden");
     filterNumber.classList.remove("hidden");
-    count();
+  
      filterNumber.innerText=rejectedList.length;
+      
 
     allCards.classList.add("hidden");
     filtered.classList.remove("hidden");
+     count();
     renderRejected();
  }
  else if(id==="all-filter"){
@@ -168,18 +177,27 @@ else if(e.target.closest(".delete-btn")){
    const cardElement = e.target.closest(".cards");
 
      const Title=cardElement.querySelector(".name").innerText;
+     const cardsInAll = allCards.getElementsByClassName("cards");
+    for (let card of cardsInAll) {
+        if (card.querySelector(".name").innerText === Title) {
+            const allStatus = card.querySelector(".status");
+            allStatus.innerText = "NOT APPLIED";
+            allStatus.classList.remove("bg-green-100", "text-green-500", "border-green-500", "bg-red-100", "text-red-500", "border-red-500", "border");
+            allStatus.classList.add("bg-blue-50", "text-blue-900");
+        }
+    }
     cardElement.remove();
     interviewList=interviewList.filter(item=>item.Title!=Title);
      rejectedList=rejectedList.filter(item=>item.Title!=Title);
 count();
  if(currentStatus==="interview-filter"){
-    filterNumber.innerText = interviewList.length;
+    
     renderInterview();
  
 
 }
 else if(currentStatus==="rejected-filter"){
-    filterNumber.innerText = rejectedList.length;
+   
     renderRejected();
 }
 }
