@@ -19,6 +19,7 @@ const emptyStateHTML = `
 </div>`;
 
 
+
 let interviewList=[];
 let rejectedList=[];
 const allCards=document.getElementById("card");
