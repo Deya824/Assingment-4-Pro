@@ -1,9 +1,11 @@
 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
 //getElementsByClassName('className'): It returns live HTMLCollection. We use it when we have to select a group of elements with the same class name.It updates when dom changes later  where,
+
 //getElementById('id'):It returns a single element with the specific ID.We use it when we need specific one element,
 
 //querySelector(selector): It returns the first matching element where,
+
 //querySelectorAll(selector):It returns a static nodeList of all matching elements.It doesn't update when the dom changes later.
 
 2. How do you create and insert a new element into the DOM?
