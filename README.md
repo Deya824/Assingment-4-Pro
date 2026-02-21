@@ -10,6 +10,7 @@
 let mainContainer=document.getElementById("filterd");
 //insert
 let div=document.createElement("div")
+div.innerText="Hello World";
 mainContainer.appendChild(div)
 
 3. What is Event Bubbling? And how does it work?
