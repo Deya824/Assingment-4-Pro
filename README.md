@@ -1,46 +1,24 @@
-1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+# Job Application Tracker 💼
 
-//getElementsByClassName('className'): It returns live HTMLCollection. We use it when we have to select a group of elements with the same class name.It updates when dom changes later  where,
+A frontend web application designed to help users track and manage their job applications efficiently. The project includes UI design assets (Figma) and a fully functional user interface built with modern web development practices.
 
-//getElementById('id'):It returns a single element with the specific ID.We use it when we need specific one element,
+## 🚀 Live Demo
 
-//querySelector(selector): It returns the first matching element where,
+**Start tracking here:** 👉 **[Launch the Job Application Tracker](https://deya824.github.io/Assingment-4-Pro/index.html)** *(Assuming standard GitHub pages deployment)*
 
-//querySelectorAll(selector):It returns a static nodeList of all matching elements.It doesn't update when the dom changes later.
+## 🛠️ Tech Stack
 
-2. How do you create and insert a new element into the DOM?
+- **Frontend Structure:** HTML5
+- **Styling:** CSS3 & Tailwind CSS (`tailwind.init.css`)
+- **Logic:** Vanilla JavaScript (`script.js`)
+- **Design:** Figma
 
-//Create
+## 📁 Project Structure
 
-let mainContainer=document.getElementById("filterd");
-
-
-let div=document.createElement("div")
-
-
-div.innerText="Hello World";
-
-//insert
-
-mainContainer.appendChild(div)
-
-3. What is Event Bubbling? And how does it work?
-
-//Event Bubbling:In this technique  events bubble up from the target element to its ancestors.
-
-//Here  event first triggers on the  target element and then  triggers on the ancestors of the target in the same  hierarchy until it reaches the  object.
-
-4. What is Event Delegation in JavaScript? Why is it useful?
-   
-//Event Delegation:A technique where a parent handles events of child elements using bubbling.
-
-//It is useful for dynamic content .It  reduces memory usage and also reduces number of event listener.
-
-
-
-
-5. What is the difference between preventDefault() and stopPropagation() methods?
-
-//preventDefault():It tells the browser not to perform the default action  associated with a specific event.
-
-//stopPropagation(): It prevents the event from bubbling further up the DOM tree.It usually prevents later propagation of the current event in the capturing and bubbling phases.
+```text
+Assingment-4-Pro/
+├── Job Application Tracker.fig   # Original Figma design file
+├── index.html                    # Main HTML entry point
+├── script.js                     # Core DOM manipulation and logic
+├── tailwind.init.css             # Tailwind CSS configuration
+└── jobs.png                      # Application asset/screenshot
